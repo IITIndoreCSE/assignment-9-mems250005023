@@ -21,8 +21,8 @@ int main() {
         colors[i].green = 255 - colors[i].green;
         colors[i].blue = 255 - colors[i].blue;
     }
-
-        cout << "Color " << i + 1 << ": "
+      for (int i = 0; i < 3; ++i) {
+          cout << "Color " << i + 1 << ": "
              << "Red = " << colors[i].red << ", "
              << "Green = " << colors[i].green <<", "
              << "Blue = "<< colors[i].blue << endl;
