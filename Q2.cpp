@@ -8,27 +8,29 @@ struct Color {
 };
 
 int main() {
+    // Initialize array of 5 Color structures with sample RGB values
     Color colors[5] = {
-        {10, 15, 20},
-        {5, 7, 12},
-        {90, 80, 5000},
-        {25, 55, 22},
-        {23, 34, 4}
+        {100, 150, 200},
+        {50, 75, 125},
+        {0, 0, 0},
+        {255, 255, 255},
+        {123, 234, 45}
     };
 
+    // Invert colors for the first 3 elements
     for (int i = 0; i < 3; ++i) {
         colors[i].red = 255 - colors[i].red;
         colors[i].green = 255 - colors[i].green;
         colors[i].blue = 255 - colors[i].blue;
     }
-      for (int i = 0; i < 3; ++i) {
-          cout << "Color " << i + 1 << ": "
+
+    // Display the RGB values of all 5 colors
+    for (int i = 0; i < 5; ++i) {
+        cout << "Color " << i + 1 << ": "
              << "Red = " << colors[i].red << ", "
-             << "Green = " << colors[i].green <<", "
-             << "Blue = "<< colors[i].blue << endl;
+             << "Green = " << colors[i].green << ", "
+             << "Blue = " << colors[i].blue << endl;
     }
+
     return 0;
 }
-
-
-
